@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pump velocity and pressure models</title>
+    <meta name="description" content="FST pump model">
+    <script src="https://aframe.io/releases/1.1.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.0/dist/aframe-extras.min.js"></script>
+    <script src="https://unpkg.com/aframe-look-at-component@0.8.x/dist/aframe-look-at-component.min.js"></script>
+    
+    <script>
+      AFRAME.registerComponent("toggle1", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            let target1 = document.querySelector("#object2")
+            target1.setAttribute("visible", !target1.getAttribute("visible"))
+            let target3 = document.querySelector("#object3")
+            target3.setAttribute("visible", !target3.getAttribute("visible"))
+            let target4 = document.querySelector("#object4")
+            target4.setAttribute("visible", "true")
+            let target5 = document.querySelector("#object5")
+            target5.setAttribute("visible", "false")
+            let target6 = document.querySelector("#object6")
+            target6.setAttribute("visible", "false")
+            let target7 = document.querySelector("#object7")
+            target7.setAttribute("visible", "false")
+            let target8 = document.querySelector("#object8")
+            target8.setAttribute("visible", "false")
+            let target9 = document.querySelector("#object9")
+            target9.setAttribute("visible", "false")
+            let target10 = document.querySelector("#object10")
+            target10.setAttribute("visible", "false")
+            let target11 = document.querySelector("#object11")
+            target11.setAttribute("visible", "false")
+            
+          })
+        }
+      })
+    </script>
+    
+    <script>
+      AFRAME.registerComponent("toggle2", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            let target1 = document.querySelector("#object5")
+            target1.setAttribute("visible", !target1.getAttribute("visible"))
+            let target3 = document.querySelector("#object4")
+            target3.setAttribute("visible", "false")
+            let target2 = document.querySelector("#object6")
+            target2.setAttribute("visible", "true")
+            let target4 = document.querySelector("#object8")
+            target4.setAttribute("visible", "false")
+            let target5 = document.querySelector("#object2")
+            target5.setAttribute("visible", "false")
+            let target6 = document.querySelector("#object3")
+            target6.setAttribute("visible", "true")
+            let target7 = document.querySelector("#object9")
+            target7.setAttribute("visible", "false")
+            let target8 = document.querySelector("#object11")
+            target8.setAttribute("visible", !target8.getAttribute("visible"))
+            
+          })
+        }
+      })
+    </script>
+    
+    <script>
+      AFRAME.registerComponent("toggle3", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            let target1 = document.querySelector("#object7")
+            target1.setAttribute("visible", !target1.getAttribute("visible"))
+            let target3 = document.querySelector("#object4")
+            target3.setAttribute("visible", "false")
+            let target2 = document.querySelector("#object6")
+            target2.setAttribute("visible", "true")
+            let target4 = document.querySelector("#object8")
+            target4.setAttribute("visible", "false")
+            let target5 = document.querySelector("#object2")
+            target5.setAttribute("visible", "false")
+            let target6 = document.querySelector("#object3")
+            target6.setAttribute("visible", "true")
+            let target7 = document.querySelector("#object9")
+            target7.setAttribute("visible", "false")
+            let target8 = document.querySelector("#object10")
+            target8.setAttribute("visible", !target8.getAttribute("visible"))
+            
+          })
+        }
+      })
+    </script>
+    
+    <script>
+      AFRAME.registerComponent("toggle4", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            let target1 = document.querySelector("#object8")
+            target1.setAttribute("visible", !target1.getAttribute("visible"))
+            let target3 = document.querySelector("#object4")
+            target3.setAttribute("visible", "false")
+            let target2 = document.querySelector("#object6")
+            target2.setAttribute("visible", "true")
+            let target4 = document.querySelector("#object7")
+            target4.setAttribute("visible", "false")
+            let target5 = document.querySelector("#object5")
+            target5.setAttribute("visible", "false")
+            let target6 = document.querySelector("#object2")
+            target6.setAttribute("visible", "false")
+            let target7 = document.querySelector("#object3")
+            target7.setAttribute("visible", "true")
+            let target8 = document.querySelector("#object9")
+            target8.setAttribute("visible", !target8.getAttribute("visible"))
+            let target9 = document.querySelector("#object10")
+            target9.setAttribute("visible", "false")
+            let target10 = document.querySelector("#object11")
+            target10.setAttribute("visible", "false")
+            
+          })
+        }
+      })
+    </script>
+    
+    <script>
+      AFRAME.registerComponent("toggle5", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            let target1 = document.querySelector("#Plowlight")
+            target1.setAttribute("material", "shader: flat; color: yellowgreen")
+            let target2 = document.querySelector("#Phighlight")
+            target2.setAttribute("material", "shader: flat; color: dimgrey")
+            document.getElementById("object5").setAttribute('position', '-0.5 0 -0.7')
+            document.getElementById("object7").setAttribute('position', '-0.5 0 -0.7')
+            document.getElementById("object8").setAttribute('position', '-0.5 0 -0.7')
+            document.getElementById("object9").setAttribute('position', '-0.5 -2 -0.7')
+            document.getElementById("object10").setAttribute('position', '-0.5 -2 -0.7')
+            document.getElementById("object11").setAttribute('position', '-0.5 -2 -0.7')
+            
+          })
+        }
+      })
+    </script>
+    
+    <script>
+      AFRAME.registerComponent("toggle6", {
+        init: function() {
+          this.el.addEventListener("click", (e) => {
+            let target1 = document.querySelector("#Plowlight")
+            target1.setAttribute("material", "shader: flat; color: dimgrey")
+            let target2 = document.querySelector("#Phighlight")
+            target2.setAttribute("material", "shader: flat; color: yellowgreen")
+            document.getElementById("object5").setAttribute('position', '-0.5 -2 -0.7')
+            document.getElementById("object7").setAttribute('position', '-0.5 -2 -0.7')
+            document.getElementById("object8").setAttribute('position', '-0.5 -2 -0.7')
+            document.getElementById("object9").setAttribute('position', '-0.5 0 -0.7')
+            document.getElementById("object10").setAttribute('position', '-0.5 0 -0.7')
+            document.getElementById("object11").setAttribute('position', '-0.5 0 -0.7')
+          })
+        }
+      })
+    </script>
+    
+    <script>
+     AFRAME.registerComponent("markerhomemove", {
+   init: function() {
+      this.el.addEventListener("click", (e)=>{
+        document.getElementById("rig").setAttribute('position', '0.1 0 0')
+      })
+   }
+ })
+    </script>
+    
+     <script>
+     AFRAME.registerComponent("marker1move", {
+   init: function() {
+      this.el.addEventListener("click", (e)=>{
+        document.getElementById("rig").setAttribute('position', '0.1 0 -2.5')
+      })
+   }
+ })
+    </script>
+    
+  </head>
+  
+  <body>
+    
+    
+    <a-scene background="color: #FAFAFA" cursor="rayOrigin: mouse" raycaster="objects: .clickable" renderer="colorManagement: true">
+      <a-sky src="#background"></a-sky>
+      <a-light intensity="0.6" type="ambient" color="#FAFAFA"></a-light>
+      <a-light type="directional" intensity="0.3" color="#FAFAFA" position="2 2 -0.5"></a-light>
+      <a-light type="directional" intensity="0.3" color="#FAFAFA" position="-2 2 -0.5"></a-light>
+       
+       <a-assets>
+         <img id="titlescreen" src="assets/titleimage.jpg?">
+         <img id="controls" src="assets/controls06.jpg">
+         <img id="credits" src="assets/credits01.jpg">
+         <a-asset-item id="gltf" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2Fpumpmodel06.glb"></a-asset-item>
+         <a-asset-item id="caseclosed" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2Fpumpcaseinatct02.glb"></a-asset-item>
+         <a-asset-item id="caseopen" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2Fpumpcasecut02.glb"></a-asset-item>
+         <a-asset-item id="impeller" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2Fimpellerrotate01.glb"></a-asset-item>
+         <a-asset-item id="impellerstatic" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2Fimpellerstatic01.glb"></a-asset-item>
+         <a-asset-item id="Vlong" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2FVlong03.glb"></a-asset-item>
+         <a-asset-item id="Vtran" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2FVtran01.glb"></a-asset-item>
+         <a-asset-item id="Plong" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2FPlong03.glb"></a-asset-item>
+         <a-asset-item id="P2long" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2FP2Plong03.glb"></a-asset-item>
+         <a-asset-item id="P2Vlong" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2FP2Vlong01.glb"></a-asset-item>
+         <a-asset-item id="P2Vtran" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2FP2Vtran03.glb"></a-asset-item>
+         <a-asset-item id="navmesh" src="https://cdn.glitch.com/6d802b50-9adc-40be-b5fc-1b4af21df41b%2Fpumpnav01.glb"></a-asset-item>
+         
+      </a-assets>
+       <a-image src="#titlescreen" position="-1.5 2.2 -2.25" width="2.03" height="1.08"></a-image>
+      <a-image src="#controls" position="0.48 1.76 -0.84" width="1.3" height="0.691"></a-image>
+      <a-image src="#credits" position="-2.34 1.54 -2.25" width="0.35" height="0.2"></a-image>
+      
+      <!--Primary environment model-->
+      <a-entity id="object1" gltf-model="#gltf" scale="1 1 1" position="-0.5 0 -0.7" visible="true" rotation="0 -45 0"></a-entity>
+      
+      <!--Toggle element models-->
+      <a-entity id="object2" gltf-model="#caseclosed" scale="1 1 1" position="-0.5 0 -0.7" visible="true" rotation="0 -45 0"></a-entity>
+      <a-entity id="object3" gltf-model="#caseopen" scale="1 1 1" position="-0.5 0 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object4" gltf-model="#impeller" scale="1 1 1" position="-0.63 1.37 -0.83" visible="true" rotation="0 -45 0" animation="property: rotation; to: -360 -45 0; dur: 1500; easing: linear; loop:true"></a-entity>
+      <a-entity id="object5" gltf-model="#Vlong" scale="1 1 1" position="-0.5 0 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object6" gltf-model="#impellerstatic" scale="1 1 1" position="-0.5 0 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object7" gltf-model="#Vtran" scale="1 1 1" position="-0.5 0 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object8" gltf-model="#Plong" scale="1 1 1" position="-0.5 0 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object9" gltf-model="#P2long" scale="1 1 1" position="-0.5 -2 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object11" gltf-model="#P2Vlong" scale="1 1 1" position="-0.5 -2 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      <a-entity id="object10" gltf-model="#P2Vtran" scale="1 1 1" position="-0.5 -2 -0.7" visible="false" rotation="0 -45 0"></a-entity>
+      
+      <!--Label toggle buttons-->
+      <a-entity id="cutbutton" class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.5 0.55 0.5" position="0 1.6 -0.85" rotation="0 0 0" toggle1></a-entity>
+      <a-entity id="Vlongbutton" class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.79 0.23 0.5" position="0.6 1.65 -0.85" rotation="0 0 0" toggle2></a-entity>
+      <a-entity id="Vtranbutton" class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.79 0.23 0.5" position="0.6 1.51 -0.85" rotation="0 0 0" toggle3></a-entity>
+      <a-entity id="Plongbutton" class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.79 0.23 0.5" position="0.91 1.65 -0.85" rotation="0 0 0" toggle4></a-entity>
+      <a-entity id="Plowbutton" class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.79 0.23 0.5" position="0.28 1.65 -0.85" rotation="0 0 0" toggle5></a-entity>
+      <a-entity id="Phighbutton" class="clickable" geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.79 0.23 0.5" position="0.28 1.51 -0.85" rotation="0 0 0" toggle6></a-entity>
+      
+      <!--<a-entity geometry="primitive: box; width: 0.3; height: 0.5; depth: 0.25" visible="false" material="shader: flat; color: green" scale="0.79 0.23 0.5" position="0.85 1.5 -0.8" rotation="0 0 0" toggle5></a-entity>
+      
+     <!--Teleportation points-->
+    <!--<a-entity id="markerhome" geometry="primitive: tetrahedron" material="color: red" scale="0.2 0.2 0.2" position="0.1 0.32 0" rotation="45 0 45" animation="property: position; from: 0.1 0.32 0; to: 0.1 0.45 0; dur: 2000; easing: linear; dir: alternate; loop: true" animation__2="property: rotation; to: 45 360 45; dur: 4000; easing: linear; loop:true" markerhomemove></a-entity>
+    <a-entity id="marker1" geometry="primitive: tetrahedron" material="color: red" scale="0.2 0.2 0.2" position="0.1 0.32 -2.5" rotation="45 0 45" animation="property: position; from: 0.1 0.32 -2.5; to: 0.1 0.45 -2.5; dur: 2000; easing: linear; dir: alternate; loop: true" animation__2="property: rotation; to: 45 360 45; dur: 4000; easing: linear; loop:true" marker1move></a-entity>
+      <a-entity id="marker2" geometry="primitive: tetrahedron" material="shader: flat; color: red" scale="0.2 0.2 0.2" position="-2 0.32 -3.4" rotation="45 0 45" marker2move></a-entity>
+      <a-entity id="marker3" geometry="primitive: tetrahedron" material="shader: flat; color: red" scale="0.2 0.2 0.2" position="2.5 0.32 -3.4" rotation="45 0 45" marker3move></a-entity>
+      <a-entity id="marker4" geometry="primitive: tetrahedron" material="shader: flat; color: red" scale="0.2 0.2 0.2" position="3.6 0.32 -2.2" rotation="45 0 45" marker4move></a-entity>
+      <a-entity id="marker5" geometry="primitive: tetrahedron" material="shader: flat; color: red" scale="0.2 0.2 0.2" position="3.6 0.32 -0.4" rotation="45 0 45" marker5move></a-entity>
+      <a-entity id="marker6" geometry="primitive: tetrahedron" material="shader: flat; color: red" scale="0.2 0.2 0.2" position="5.6 0.32 -5.5" rotation="45 0 45" marker6move></a-entity>
+      
+      <!-- Screens and Labels-->
+       
+        <a-entity id="Plowlight" geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.1" visible="true" material="shader: flat; color: yellowgreen" scale="0.25 0.25 0.2" position="0.19 1.675 -0.849" rotation="0 0 0"></a-entity>
+        <a-entity id="Phighlight" geometry="primitive: box; width: 0.1; height: 0.1; depth: 0.1" visible="true" material="shader: flat; color: dimgrey" scale="0.25 0.25 0.2" position="0.19 1.54 -0.849" rotation="0 0 0"></a-entity>
+        
+      
+      <!-- Navigation mesh -->
+      <a-entity gltf-model="#navmesh" scale="1 1 1" position="-0.5 0 -0.7" visible="false" rotation="0 -45 0" nav-mesh></a-entity>
+      
+      <!--Player rig-->
+      <a-entity id="rig" movement-controls="speed: 0.06; constrainToNavMesh: true">
+          <a-entity camera position="0 1.6 0" look-controls></a-entity>
+          <a-entity oculus-go-controls></a-entity>
+          <a-entity laser-controls="hand: right" line="color: yellow"></a-entity>
+      </a-entity>
+      
+ 
+      
+    </a-scene>
+  </body>
+</html>
